@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "insumo-3-firebase": {
+      "hosting": {
+        "app": [
+          "insumo-3-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "insumo-3-firebase"
+  }
+}
