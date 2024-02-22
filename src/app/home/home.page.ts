@@ -11,7 +11,11 @@ export class HomePage {
   ledstate: any;
   ledstate2: any;
   ledstate3: any;
+  all(): boolean {
+    return this.ledstate && this.ledstate2 && this.ledstate3;
+  }
   constructor(private db: Firestore) {
+
   }
   async toggleLED() {
     this.ledstate = !this.ledstate; 
@@ -24,6 +28,21 @@ export class HomePage {
   async toggleLED3() {
     this.ledstate3 = !this.ledstate3; 
     await setDoc(doc(this.db, 'controlLED/LED3'), { encender3: this.ledstate3 });
+  }
+  async toggleAll() {
+    const turn = !this.all();
+    this.ledstate = turn;
+    this.ledstate2 = turn;
+    this.ledstate3 = turn;
+    await Promise.all([
+      this.actEstado('LED1', turn),
+      this.actEstado('LED2', turn),
+      this.actEstado('LED3', turn)
+    ]);
+  }
+  async actEstado(led:string, estado:boolean) {
+    const ledRef = doc(this.db,'controlLED', led);
+    await setDoc(ledRef, { encender: estado });
   }
 }
 

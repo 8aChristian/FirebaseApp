@@ -4,4 +4,7 @@
   <ion-button  (click)="toggleLED()" [color]="ledstate ? 'success' : 'danger' ">Toggle LED</ion-button>
   <ion-button  (click)="toggleLED2()" [color]="ledstate2 ? 'success' : 'danger' ">Toggle LED</ion-button>
   <ion-button  (click)="toggleLED3()" [color]="ledstate3 ? 'success' : 'danger' ">Toggle LED</ion-button>
+  <ion-button (click)="toggleAll()" [color]="all() ? 'success' : 'danger'">
+    {{ all() ? 'ON' : 'OFF' }}
+  </ion-button>
 </ion-content>
