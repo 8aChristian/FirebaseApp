@@ -1,6 +1,28 @@
 
 <ion-content class="ion-padding ion-text-center">
-  <ion-title>CONTROL LED-FIREBASE</ion-title>
+  <svg viewBox="0 0 1320 300">
+
+    <!-- Symbol -->
+    <symbol id="s-text">
+      <text text-anchor="middle"
+            x="50%" y="50%" dy=".35em">
+        LED
+      </text>
+    </symbol>  
+  
+    <!-- Duplicate symbols -->
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+  
+  </svg>
   <ion-button  (click)="toggleLED()" [color]="ledstate ? 'success' : 'danger' ">Toggle LED</ion-button>
   <ion-button  (click)="toggleLED2()" [color]="ledstate2 ? 'success' : 'danger' ">Toggle LED</ion-button>
   <ion-button  (click)="toggleLED3()" [color]="ledstate3 ? 'success' : 'danger' ">Toggle LED</ion-button>
