@@ -23,11 +23,11 @@ export class HomePage {
   }
   async toggleLED2() {
     this.ledstate2 = !this.ledstate2; 
-    await setDoc(doc(this.db, 'controlLED/LED2'), { encender2: this.ledstate2 });
+    await setDoc(doc(this.db, 'controlLED/LED2'), { encender: this.ledstate2 });
   }
   async toggleLED3() {
     this.ledstate3 = !this.ledstate3; 
-    await setDoc(doc(this.db, 'controlLED/LED3'), { encender3: this.ledstate3 });
+    await setDoc(doc(this.db, 'controlLED/LED3'), { encender: this.ledstate3 });
   }
   async toggleAll() {
     const turn = !this.all();

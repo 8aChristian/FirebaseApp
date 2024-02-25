@@ -1,12 +1,12 @@
 ion-content {
   --ion-background-color: transparent; /* Fondo transparente para permitir que el gradiente se muestre */
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(20, 20, 20), rgb(37, 37, 37), rgb(10, 10, 10));
-  background-size: 400% 400%; /* Ajusta el tamaño del gradiente para permitir el movimiento */
+  background: linear-gradient(45deg, rgb(238, 36, 36), rgb(22, 22, 22), rgb(22, 22, 22), rgb(16, 216, 29));
+  background-size: 250% 250%; /* Ajusta el tamaño del gradiente para permitir el movimiento */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  animation: cambiar 10s ease-in-out infinite, fadeIn 1s ease-in-out; /* Animación de cambio de fondo */
+  animation: cambiar 3s ease-in-out infinite, fadeIn 3s ease-in-out; /* Animación de cambio de fondo */
 }
 
 @keyframes cambiar {
@@ -84,16 +84,15 @@ ion-button:active {
 
 .text {
   fill: none;
-  stroke-width: 8;
+  stroke-width: 10;
   stroke-linejoin: round;
   stroke-dasharray: 70 330;
   stroke-dashoffset: 0;
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 30rem;
-  font-size: 25rem; /* Adjust the font size as needed */
-  letter-spacing: 3rem; /* Adjust the letter spacing as needed */
+  font-weight: 5rem;
+  font-size: 26rem; /* Adjust the font size as needed */
 }
 
 .text:nth-child(5n + 1) {
